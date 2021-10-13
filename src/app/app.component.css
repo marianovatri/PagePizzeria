@@ -1,5 +1,7 @@
 
-
+  * {
+    font-family: Arial, Helvetica, sans-serif;
+}
 
 
 .rutas {
@@ -18,21 +20,25 @@ a {
     margin-top: 20px;
     text-decoration: none;
     display: flex;
+    color: #000;
     
 }
 
 a:link {text-decoration: none }
 
-a:hover { color: black; font-family: arial; text-decoration: none }
+a:hover { color: black;
+    font-size: large ;
+    text-decoration: none;
+    background-color: tomato;
+    transition:all .5s ease-in-out; }
 
-a:visited {color: black;  font-family: arial; text-decoration: none }
-
+a:visited {color: black;font-size: large ; text-decoration: none }
 
 
 
 .activa {
    color: rgb(0, 0, 0);
-   background: cadetblue;
+   background: rgb(243, 54, 21);
  
 }
 
@@ -54,10 +60,7 @@ button {
         background-color: #fff;
         width: 100%;
         height: 80px;
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
+        
         box-shadow: 0 .2rem 1.2rem rgba(15,15,15,.175);
       
     }
@@ -66,7 +69,7 @@ button {
 
   
         display: flex;
-        justify-content:space-between;
+        justify-content:end;
         background-color: #fff;
         width: 100%;
         height: 80px;
@@ -83,4 +86,8 @@ button {
         width: 80px;
         margin-left: 120px;
         
+        
         }
+
+
+  
