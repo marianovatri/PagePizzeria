@@ -1,0 +1,69 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.rutas {
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+}
+
+.rutas img {
+    
+   height: 20px;
+}
+
+a {
+    padding: 10px;
+    margin-top: 20px;
+    text-decoration: none;
+    display: flex;
+    color: #000;
+    
+}
+
+a:link {text-decoration: none }
+
+a:hover { color: black;
+    font-size: large ;
+    text-decoration: none;
+    background-color: tomato;
+    transition:all .5s ease-in-out; }
+
+a:visited {color: black;font-size: large ; text-decoration: none }
+
+
+
+.activa {
+   color: rgb(0, 0, 0);
+   background: rgb(243, 54, 21);
+ 
+}
+
+
+
+.header {
+       
+        display: flex;
+        justify-content:space-between;
+        background-color: #fff;
+        width: 100%;
+        height: 80px;
+        
+        box-shadow: 0 .2rem 1.2rem rgba(15,15,15,.175);
+      
+    }
+
+
+
+.logo img {
+         cursor: pointer;
+        width: 80px;
+        margin-left: 120px;
+        
+        
+        }
+
+
+  
