@@ -4,14 +4,20 @@
 
 
 .rutas {
-    width: 30%;
+  
     display: flex;
-    flex-direction: row;
+    margin-left: 5%;
+    box-sizing: border-box;
 }
 
 .rutas img {
     
-   height: 20px;
+   max-height: 20px;
+
+}
+
+.rutas div {
+    box-sizing: border-box;
 }
 
 a {
@@ -49,9 +55,8 @@ a:visited {color: black;font-size: large ; text-decoration: none }
         justify-content:space-between;
         background-color: #fff;
         width: 100%;
-        height: 80px;
-        
-        box-shadow: 0 .2rem 1.2rem rgba(15,15,15,.175);
+        height: auto;
+        box-shadow: 0 .2rem 1.2rem rgba(0, 0, 0, 0.175);
       
     }
 
@@ -59,11 +64,19 @@ a:visited {color: black;font-size: large ; text-decoration: none }
 
 .logo img {
          cursor: pointer;
-        width: 80px;
-        margin-left: 120px;
+         height: auto;
+        width: 100px;
+        margin-left: 35%;
         
         
         }
 
-
+ @media screen and (max-width: 650px) {
+         .header {
+             align-items: center;
+         flex-direction: column;
+         font-size: 15px;
+            }
+              
+          }
   
