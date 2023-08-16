@@ -1,71 +1,20 @@
-
-<h1> ELEGÍ TU ESTILO </h1>
+<h1 class="title">Elegí tu estilo</h1>
 <div class="container">
-    
-
-    <div class="box">
-
-        <div>
-            <h2>Pizza de muzarrela</h2>
-        </div>
-        
-        <div>
-            
-           <img src="https://www.infobae.com/new-resizer/Lr3uGNGmkgcyXyftaNcwIZ-4Da4=/s3.amazonaws.com/arc-wordpress-client-uploads/infobae-wp/wp-content/uploads/2019/06/06185430/1980-pizzeria-.jpg" alt="">
-           
-        </div>
-
+  <div *ngFor="let pizza of pizzas" class="box">
+    <div class="description">
+      <h2>{{ pizza.name }}</h2>
+      <ul>
+        <li *ngFor="let ingredient of pizza.ingredients">{{ ingredient }}</li>
+      </ul>
+      <!-- Botón "Agregar al carrito" -->
+      <button class="btn-agregar" (click)="agregarAlCarrito(pizza)"><i>Agregar al carrito</i></button>
     </div>
-
-    <div class="box">
-
-        <div>
-            <h2>Pizza Napolitana</h2>
-        </div>
-        
-        <div>
-           <img src="https://www.marlaveganpizza.com/wp-content/uploads/2021/02/napo.jpg" alt="">
-        </div>
+    <div>
+      <img [src]="pizza.imageUrl" [alt]="pizza.name">
     </div>
-
-    <div class="box">
-
-        <div>
-            <h2>Pizza de Ananá</h2>
-        </div>
-        
-        <div>
-           <img src="https://media-cdn.tripadvisor.com/media/photo-s/03/40/08/5f/bardpizzas.jpg" alt="">
-        </div>
-
-    </div>
-
-    <div class="box">
-      <div>
-  
-            <h2>Pizza Especial</h2>
-        </div>
-        
-        <div>
-           <img src="https://www.supermercedes.com.ar/lagringa/wp-content/uploads/2020/11/pizza-jamon-y-morron.jpg" alt="">
-        </div>
-
-    </div>
-
-    <div class="box">
-        <div>
-    
-              <h2>Pizza de Rucula</h2>
-          </div>
-          
-          <div>
-             <img src="https://margherita.com.ar/wp-content/uploads/2019/05/rucula-y-parmesano.jpg" alt="">
-          </div>
-  
-      </div>
-    
-
-
+  </div>
 </div>
 
-
+<a href="https://api.whatsapp.com/send/?phone=543564335655&text=Hola,+quiero+hacer+un+pedido" class="whatsapp-float" target="_blank">
+  <i class="fab fa-whatsapp"></i>
+</a>

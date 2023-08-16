@@ -1,53 +1,87 @@
 
 .footer {
+  background-color: #333;
+  color: #fff;
+  position: relative;
+  padding: 1rem;
+}
+
+.boxInfo {
+    display: flex;
+    justify-content: space-between;
+}
+  
+  .footer h3 {
+    margin-bottom: 0.5rem;
+  }
+
+  .social-links {
+    display: flex;
+    background: #df0202;
+    border-radius: 1rem;
+    height: max-content;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Estilos para los íconos de redes sociales */
+  .social-links i {
+    font-size: 1.5rem;
+    margin-right: 5px;
+    transition: color 0.3s ease; /* Transición suave del color */
+  }
+
+  .social-links a:hover i {
+   color: black;; /* Nuevo color al hacer hover */
+  }
+
+  .social-links i {
+    font-size: 1.5rem;
+    margin-right: 5px;
+  }
+
+  .MyName {
+    text-align: center;
+    background: #252525;
+    padding: 1em;
+  }
+
+  .MyName p {
+    margin: 0;
+  }
+  
+  .social-links ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  .social-links li {
+    margin-right: 1rem;
+  }
+  
+  .social-links a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .social-links a:hover {
+    text-decoration: underline;
+  }
+
+  a {
+    text-decoration: none;
+    color: #df0202;
+  }
+
+  @media screen and (max-width: 900px) {
+    .boxInfo {
+      flex-direction: column-reverse;
+      text-align: center;
+    }
+  }
+
 
   
-    display: flex;
-    justify-content:end;
-    background-color: rgba(255, 255, 255, 0.678);
-    width: 100%;
-    height: 80px;
-    position:fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    box-shadow: 0 .2rem 1.2rem rgba(15, 15, 15, 0.534);
-
-}
-
-
-* {
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-
-a {
-    padding: 10px;
-    margin-top: 20px;
-    text-decoration: none;
-    display: flex;
-    color: #000;
-    
-}
-
-a:link {text-decoration: none }
-
-a:hover { color: black;
-    font-size: large ;
-    text-decoration: none;
-    background-color: tomato;
-    transition:all .5s ease-in-out; }
-
-a:visited {color: black;font-size: large ; text-decoration: none }
-
-
-
-.activa {
-   color: rgb(0, 0, 0);
-   background: rgb(243, 54, 21);
- 
-}
-
 
 
 

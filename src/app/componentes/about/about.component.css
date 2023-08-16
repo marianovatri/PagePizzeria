@@ -3,6 +3,9 @@ h1 {
    text-align: center;
 }
 
+.title {
+}
+
 .container {
     display: flex;
     flex-wrap: wrap;
@@ -11,35 +14,115 @@ h1 {
 }
 
 
-
 .box {
-    width: 50%;
-    padding: 20px;
+    width: 70%;
+    padding: 10px;
+    margin: 10px;
+    background-image: url(../../images/madera.jpg);
+    display: flex;
     cursor: pointer;
+    align-items: center;
     border-radius: 20px;
     box-sizing: border-box;
-    
- 
 }
 
+.box .description {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.description ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: white;
+}
+
+.box .imageBox {
+    width: 40%;
+}
+
+.box:nth-child( odd ) {
+    flex-direction: row-reverse;
+}
 
 .box h2 {
     margin: 5px auto;
-    text-align: center ;
+    text-align: center;
+    color: white;
 }
 .box img {
     border-radius: 20px;
-    width: 100%;
-    height: auto ;
+    width: 32vw;
+    height: auto;
 }
 
-img:hover {filter: opacity(.7);}
+img:hover {
+    transition: all 1s;
+    filter: opacity(5);
+    transform: scale(1.03)
+}
+
+/* Estilos para el botón flotante de WhatsApp */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: #fff;
+    font-size: 24px;
+    z-index: 1;
+    text-decoration: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+  }
+  
+  .whatsapp-float:hover {
+    background-color: #128c7e;
+  }
+
+  .btn-agregar {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffffff; /* Color azul */
+    color: #000000;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Estilos cuando se pasa el cursor sobre el botón */
+  .btn-agregar:hover {
+    background-color: #e2e2e2;
+    box-shadow: inset 1px 1px 4px 0px black;
+  }
 
 @media screen and (max-width: 900px) {
   .box {
-      width: 80%;
-  }
+      width: 90%;
+    }
+}
 
+@media screen and (max-width: 600px) {
+  .box {
+        width: 90%;
+        display: flex;
+        flex-direction: column-reverse !important;
+        align-items: center;
+    }
     
+    .box img {
+        width: 50vw;
+    }
+
 }
 

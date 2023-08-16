@@ -7,6 +7,9 @@ import { ContactComponent } from './componentes/contact/contact.component';
 import { HorariosComponent } from './componentes/horarios/horarios.component';
 import { HeaderComponent } from './componentes/header/header.component';
 import { FooterComponent } from './componentes/footer/footer.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+
 
 @NgModule({
   declarations: [
@@ -19,9 +22,11 @@ import { FooterComponent } from './componentes/footer/footer.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserModule,
+    BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [], 
   bootstrap: [AppComponent]
 })
 export class AppModule { }

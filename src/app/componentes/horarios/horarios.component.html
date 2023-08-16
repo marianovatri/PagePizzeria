@@ -1,16 +1,55 @@
-<div>
-    <h3>Lunes </h3>
-20:00 - 23:00
-<h3>Martes</h3>
-20:00 - 23:00
-<h3>Miércoles</h3>
-20:00 - 23:00
-<h3>Jueves</h3>
-20:00 - 23:00
-<h3>Viernes</h3>
-20:00 - 23:00
-<h3>Sábado</h3>
-20:00 - 23:00
-<h3>Domingo</h3>
-20:00 - 23:00 
-<div>
+
+<h1>Las 🍕 más pedidas</h1>
+<div class="carousel-container">
+  <div class="progress-bar"></div> <!-- Barra de progreso -->
+  <div class="carousel">
+    <div *ngFor="let pizza of pizzas.slice(startIndex, endIndex)" class="carousel-item">
+      <div class="description">
+        <img [src]="pizza.imageUrl" [alt]="pizza.name">
+        <h4>{{ pizza.name }}</h4>
+        <button class="btn-agregar" (click)="agregarAlCarrito(pizza)">Agregar al carrito</button>
+      </div>
+    </div>
+  </div>
+  <div class="arrow left" (click)="slide('left')">&lt;</div>
+  <div class="arrow right" (click)="slide('right')">&gt;</div>
+</div>
+
+<h1>Carrito de compras</h1>
+<div *ngIf="carrito.length > 0" class="carrito-container">
+  <ul class="carrito-list">
+    <li *ngFor="let pizza of carrito" class="carrito-item">
+      <div class="pizza-details">
+        <img [src]="pizza.imageUrl" [alt]="pizza.name" class="pizza-image">
+        <div class="pizza-info">
+          <h3>{{ pizza.name }}</h3>
+          <p><strong>Cantidad:</strong> {{ pizza.quantity }}</p>
+          <div class="cantidad">
+            <!-- Botones de "+" y "-" para sumar o restar pizzas al carrito -->
+            <button (click)="quitarUnaPizza(pizza)" class="btn-sumar-restar">
+              <i class="fas fa-minus"></i>
+            </button>
+            <p class="total-pizza">{{pizza.quantity }}</p>
+            <button (click)="agregarUnaPizza(pizza)" class="btn-sumar-restar">
+              <i class="fas fa-plus"></i>
+            </button>
+          </div>
+          <p><strong>Precio unitario:</strong> ${{ pizza.price }}</p>
+          <button (click)="eliminarDelCarrito(pizza)" class="btn-eliminar">Eliminar</button>
+        </div>
+      </div>
+      <div class="pizza-total">
+        <p class="total-pizza">Total: ${{ pizza.price * pizza.quantity }}</p>
+      </div>
+    </li>
+  </ul>
+  <h2 class="total">Pedido de <strong>{{cantidadTotal()}}</strong> pizzas.</h2>
+  <h2 class="total">Total a pagar: ${{ obtenerTotal() }}</h2>
+  <h2 class="total">
+    <button (click)="hacerPedido()" class="btn-hacer-pedido">Realizar pedido</button>
+  </h2>
+</div>
+
+<div *ngIf="carrito.length === 0" class="empty-cart">
+  <p>El carrito está vacío.</p>
+</div>
